@@ -1,0 +1,131 @@
+127.0.0.1 - - [05/Dec/2021 23:49:47] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [05/Dec/2021 23:49:47] code 404, message File not found
+127.0.0.1 - - [05/Dec/2021 23:49:47] "GET /script/main.bundle.js.gz?v=1.0.0 HTTP/1.1" 404 -
+Traceback (most recent call last):
+  File "/usr/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/usr/lib/python3.9/http/server.py", line 1290, in <module>
+    test(
+  File "/usr/lib/python3.9/http/server.py", line 1245, in test
+    with ServerClass(addr, HandlerClass) as httpd:
+  File "/usr/lib/python3.9/socketserver.py", line 452, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.9/http/server.py", line 1288, in server_bind
+    return super().server_bind()
+  File "/usr/lib/python3.9/http/server.py", line 138, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.9/socketserver.py", line 466, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+127.0.0.1 - - [05/Dec/2021 23:51:16] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [05/Dec/2021 23:51:16] "GET /main.bundle.js.gz?v=1.0.0 HTTP/1.1" 200 -
+Traceback (most recent call last):
+  File "/usr/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/usr/lib/python3.9/http/server.py", line 1290, in <module>
+    test(
+  File "/usr/lib/python3.9/http/server.py", line 1245, in test
+    with ServerClass(addr, HandlerClass) as httpd:
+  File "/usr/lib/python3.9/socketserver.py", line 452, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.9/http/server.py", line 1288, in server_bind
+    return super().server_bind()
+  File "/usr/lib/python3.9/http/server.py", line 138, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.9/socketserver.py", line 466, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+127.0.0.1 - - [05/Dec/2021 23:52:33] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [05/Dec/2021 23:52:33] "GET /main.bundle.js?v=1.0.0 HTTP/1.1" 200 -
+Traceback (most recent call last):
+  File "/usr/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/usr/lib/python3.9/http/server.py", line 1290, in <module>
+    test(
+  File "/usr/lib/python3.9/http/server.py", line 1245, in test
+    with ServerClass(addr, HandlerClass) as httpd:
+  File "/usr/lib/python3.9/socketserver.py", line 452, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.9/http/server.py", line 1288, in server_bind
+    return super().server_bind()
+  File "/usr/lib/python3.9/http/server.py", line 138, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.9/socketserver.py", line 466, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+127.0.0.1 - - [05/Dec/2021 23:54:17] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [05/Dec/2021 23:54:18] "GET /538.bundle.js?v=1.0.0 HTTP/1.1" 200 -
+127.0.0.1 - - [05/Dec/2021 23:54:18] "GET /main.bundle.js?v=1.0.0 HTTP/1.1" 200 -
+Traceback (most recent call last):
+  File "/usr/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/usr/lib/python3.9/http/server.py", line 1290, in <module>
+    test(
+  File "/usr/lib/python3.9/http/server.py", line 1245, in test
+    with ServerClass(addr, HandlerClass) as httpd:
+  File "/usr/lib/python3.9/socketserver.py", line 452, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.9/http/server.py", line 1288, in server_bind
+    return super().server_bind()
+  File "/usr/lib/python3.9/http/server.py", line 138, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.9/socketserver.py", line 466, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+127.0.0.1 - - [06/Dec/2021 00:05:11] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [06/Dec/2021 00:05:11] code 404, message File not found
+127.0.0.1 - - [06/Dec/2021 00:05:11] "GET /styles.css?v=1.0.0 HTTP/1.1" 404 -
+127.0.0.1 - - [06/Dec/2021 00:05:11] "GET /538.bundle.js?v=1.0.0 HTTP/1.1" 200 -
+127.0.0.1 - - [06/Dec/2021 00:05:11] "GET /main.bundle.js?v=1.0.0 HTTP/1.1" 200 -
+127.0.0.1 - - [06/Dec/2021 00:05:16] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [06/Dec/2021 00:05:16] code 404, message File not found
+127.0.0.1 - - [06/Dec/2021 00:05:16] "GET /styles.css?v=1.0.0 HTTP/1.1" 404 -
+127.0.0.1 - - [06/Dec/2021 00:05:16] "GET /main.bundle.js?v=1.0.0 HTTP/1.1" 304 -
+127.0.0.1 - - [06/Dec/2021 00:05:16] "GET /538.bundle.js?v=1.0.0 HTTP/1.1" 304 -
+127.0.0.1 - - [06/Dec/2021 00:09:14] code 404, message File not found
+127.0.0.1 - - [06/Dec/2021 00:09:14] "GET /styles.css?v=1.0.0 HTTP/1.1" 404 -
+Traceback (most recent call last):
+  File "/usr/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/usr/lib/python3.9/http/server.py", line 1290, in <module>
+    test(
+  File "/usr/lib/python3.9/http/server.py", line 1245, in test
+    with ServerClass(addr, HandlerClass) as httpd:
+  File "/usr/lib/python3.9/socketserver.py", line 452, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.9/http/server.py", line 1288, in server_bind
+    return super().server_bind()
+  File "/usr/lib/python3.9/http/server.py", line 138, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.9/socketserver.py", line 466, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+127.0.0.1 - - [06/Dec/2021 00:09:43] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [06/Dec/2021 00:09:43] code 404, message File not found
+127.0.0.1 - - [06/Dec/2021 00:09:43] "GET /styles.css?v=1.0.0 HTTP/1.1" 404 -
+127.0.0.1 - - [06/Dec/2021 00:09:44] "GET /main.bundle.js?v=1.0.0 HTTP/1.1" 200 -
+127.0.0.1 - - [06/Dec/2021 00:09:44] "GET /538.bundle.js?v=1.0.0 HTTP/1.1" 200 -
+127.0.0.1 - - [06/Dec/2021 00:46:06] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [06/Dec/2021 00:46:07] code 404, message File not found
+127.0.0.1 - - [06/Dec/2021 00:46:07] "GET /styles.css?v=1.0.0 HTTP/1.1" 404 -
+127.0.0.1 - - [06/Dec/2021 00:46:07] "GET /main.bundle.js?v=1.0.0 HTTP/1.1" 200 -
+127.0.0.1 - - [06/Dec/2021 00:46:07] "GET /538.bundle.js?v=1.0.0 HTTP/1.1" 200 -
+127.0.0.1 - - [06/Dec/2021 00:46:17] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [06/Dec/2021 00:46:17] code 404, message File not found
+127.0.0.1 - - [06/Dec/2021 00:46:17] "GET /styles.css?v=1.0.0 HTTP/1.1" 404 -
+127.0.0.1 - - [06/Dec/2021 00:46:17] "GET /main.bundle.js?v=1.0.0 HTTP/1.1" 200 -
+127.0.0.1 - - [06/Dec/2021 00:46:17] "GET /538.bundle.js?v=1.0.0 HTTP/1.1" 200 -
+127.0.0.1 - - [06/Dec/2021 00:46:18] code 404, message File not found
+127.0.0.1 - - [06/Dec/2021 00:46:18] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [06/Dec/2021 00:46:23] code 404, message File not found
+127.0.0.1 - - [06/Dec/2021 00:46:23] "GET /styles.css?v=1.0.0 HTTP/1.1" 404 -
