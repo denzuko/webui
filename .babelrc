@@ -1,0 +1,9 @@
+{
+        "presets": ["@vue/babel-preset-jsx"],
+        "plugins": [
+            "@babel/plugin-transform-runtime",
+            '@babel/plugin-transform-async-to-generator',
+            '@babel/plugin-transform-arrow-functions',
+            '@babel/plugin-proposal-class-properties'
+        ]
+}

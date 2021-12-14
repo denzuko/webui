@@ -29,3 +29,6 @@ nbproject/
 Thumbs.db
 ./~
 ./node_modules
+build
+nohup.out
+yarn.lock

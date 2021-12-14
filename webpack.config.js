@@ -1,71 +1,66 @@
 const path = require("path");
-const copy = require("copy-webpack-plugin");
+
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CompressionPlugin = require("compression-webpack-plugin");
-const { VueLoaderPlugin } = require('vue-loader');
+const VueLoaderPlugin  = require('vue-loader/lib/plugin');
 const WebpackObfuscator = require('webpack-obfuscator');
 const TerserPlugin = require("terser-webpack-plugin");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: "./src/main.ts",
-  devtool: "inline-source-map",
+  mode: "production",
+  entry: "./src/main.js",
+  devtool: false || "inline-source-map",
+
   module: {
     rules: [
-      {
-        test: /\.vue$/,
-        use: "vue-loader",
-      },
-      {
-        test: /\.s?(c|a)ss$/,
-        use: [
-          'vue-style-loader',
-          'css-loader',
-          'sass-loader'
-        ]
-      },
-      {
-        test: /\.tsx?$/,
-        use: "ts-loader",
-        exclude: /node_modules/,
-      },
+      { test: /\.vue$/, use: ['vue-loader'] },
+      { test: /\.jsx?$/, exclude: /node_modules/, use: ['babel-loader'] },
+      { test: /\.s?(c|a)ss$/, use: [ 'vue-style-loader', 'css-loader', 'sass-loader' ] },
+      { test: /\.(png|svg|jpe?g|gif)$/, use: [ 'file-loader' ] }
     ],
   },
+
   optimization: {
     minimize: true,
     minimizer: [
-        new TerserPlugin({
-            extractComments: false,
-        }),
+        new TerserPlugin({ extractComments: false })
     ],
-    splitChunks: {
-      chunks: 'all'
-    }
+    splitChunks: { chunks: 'all' }
   },
+
+  target: ['web', 'es5'], 
+
   plugins: [
+    new CleanWebpackPlugin(),
+
     new WebpackObfuscator({ rotateStringArray: true }),
+
     new CompressionPlugin(),
+
     new VueLoaderPlugin(),
+
     new HtmlWebPackPlugin({
         inject: true,
-        template: 'src/index.html'
+        template: 'src/index.html',
+        filename: 'index.html'
     })
-      /*,
-    new copy({
-        patterns: [
-            {"from": "src/*", "to": "[name][ext]"}
-        ]
-    })*/
   ],
+
   resolve: {
-    extensions: [".tsx", ".ts", ".js"],
+    extensions: [".js", '.vue'],
     alias: {
       // https://vuejs.org/v2/guide/installation.html#Runtime-Compiler-vs-Runtime-only
       // TODO: Add configuration for production builds.
       "vue$": "vue/dist/vue.esm.js",
+      "components": path.resolve(__dirname, "src/components"),
+      "images": path.resolve(__dirname, "src/assets/images"),
     }
   },
+
   output: {
-    filename: "[name].bundle.js",
+    filename: "[name].[contenthash].bundle.js",
     path: path.resolve(__dirname, "build"),
+    publicPath: '/',
   },
 };
