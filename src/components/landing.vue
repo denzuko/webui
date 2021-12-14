@@ -1,9 +1,9 @@
 <template>
-<h1>Hello World</h1>
-
+    <v-container>
+        <v-card><h1>Hello World</h1></v-card>
+    </v-container>
 </template>
-<style>
-</style>
+
 <script>
-export default { }
+export default { name: 'landing' }
 </script>

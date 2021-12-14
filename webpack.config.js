@@ -1,11 +1,12 @@
 const path = require("path");
 
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const CompressionPlugin = require("compression-webpack-plugin");
-const VueLoaderPlugin  = require('vue-loader/lib/plugin');
 const WebpackObfuscator = require('webpack-obfuscator');
 const TerserPlugin = require("terser-webpack-plugin");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
+
+const WebpackPluginPWAManifest = require('webpack-plugin-pwa-manifest');
+const VueLoaderPlugin  = require('vue-loader/lib/plugin');
 
 module.exports = {
   mode: "production",
@@ -29,14 +30,12 @@ module.exports = {
     splitChunks: { chunks: 'all' }
   },
 
-  target: ['web', 'es5'], 
+  target: ['web', 'es6'], 
 
   plugins: [
     new CleanWebpackPlugin(),
 
     new WebpackObfuscator({ rotateStringArray: true }),
-
-    new CompressionPlugin(),
 
     new VueLoaderPlugin(),
 
@@ -44,7 +43,9 @@ module.exports = {
         inject: true,
         template: 'src/index.html',
         filename: 'index.html'
-    })
+    }),
+
+    new WebpackPluginPWAManifest()
   ],
 
   resolve: {
@@ -53,6 +54,7 @@ module.exports = {
       // https://vuejs.org/v2/guide/installation.html#Runtime-Compiler-vs-Runtime-only
       // TODO: Add configuration for production builds.
       "vue$": "vue/dist/vue.esm.js",
+      "@": path.resolve(__dirname, 'src'),
       "components": path.resolve(__dirname, "src/components"),
       "images": path.resolve(__dirname, "src/assets/images"),
     }
