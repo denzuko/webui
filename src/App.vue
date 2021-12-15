@@ -1,10 +1,11 @@
 <script>
 export default {
     name: 'App',
-    data: {
+    data() {
+        return {}
     }
 }
-<script>
+</script>
 
 <template>
     <v-app>
