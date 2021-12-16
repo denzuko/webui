@@ -65,4 +65,9 @@ module.exports = {
     path: path.resolve(__dirname, "build"),
     publicPath: '/',
   },
+  
+  devServer: {
+     contentBase: path.resolve(__dirname, "build),
+     watchContentBase: true
+  },
 };
