@@ -1,19 +1,18 @@
-import { createWebHistory, createRouter } from 'vue-router'
-import Landing from '@/components/landing.vue'
+import { createWebHistory, createRouter } from 'vue-router';
+import LandingPage from '../components/landing-page.vue';
 
-const RouteComponent = (path, component, meta) => {
-    return {
-        path: path,
-        component: component || "NotFound",
-        meta: meta || {}
-    }
-}
+const RouteComponent = (path, component, meta) => ({
+  path,
+  component: component || 'NotFound',
+  meta: meta || {},
+});
 
-let routes = [
-  RouteComponent("/", "landing"),
-  RouteComponent("*")];
+const routes = [
+  RouteComponent('/', LandingPage),
+  RouteComponent('*'),
+];
 
 export default createRouter({
-    history: createWebHistory,
-    routes
+  history: createWebHistory,
+  routes,
 });

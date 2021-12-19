@@ -1,17 +1,17 @@
-import Vuex from 'vuex'
-import router from "./router"
+import Vuex from 'vuex';
 
-import 'vuetify/styles'
-import { createApp } from 'vue'
-import { createVuetify } from 'vuetify'
+// import 'vuetify/styles';
+import { createApp } from 'vue';
+import { createVuetify } from 'vuetify';
 
-import App from './App.vue'
+import router from './router';
+import App from './App.vue';
 
-const root = Vue.createApp({
-    components: { App },
-    router
-})
+const root = createApp({
+  components: { App },
+});
 
-root.use(Vuex)
-root.use(createVuetify())
-root.mount('body')
+root.use(Vuex);
+root.use(createVuetify());
+root.use(router);
+root.mount('body');

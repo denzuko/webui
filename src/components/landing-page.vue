@@ -25,16 +25,18 @@
 </template>
 
 <script>
-import algoliasearch from 'algoliasearch/lite'
-import 'instantsearch.css/themes/algolia-min.css'
+import algoliasearch from 'algoliasearch/lite';
+import 'instantsearch.css/themes/algolia-min.css';
 
 export default {
-    name: 'landing',
-    data() {
-        return {
-            'searchclient': algoliasearch('JH6JMX67ZR',
-            '368cc493ba2de909d37a68b6489065dc')
-        }
-    }
-}
-<script>
+  name: 'LandingPage',
+  data() {
+    return {
+      searchclient: algoliasearch(
+        'JH6JMX67ZR',
+        '368cc493ba2de909d37a68b6489065dc',
+      ),
+    };
+  },
+};
+</script>

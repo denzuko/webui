@@ -1,10 +1,10 @@
 <script>
 export default {
-    name: 'App',
-    data() {
-        return {}
-    }
-}
+  name: 'App',
+  data() {
+    return {};
+  },
+};
 </script>
 
 <template>
@@ -13,7 +13,7 @@ export default {
 
         <v-main>
             <v-container>
-                <router-view/> 
+                <router-view/>
             </v-container>
         </v-main>
       </v-app>
